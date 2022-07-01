@@ -1,7 +1,6 @@
-package com.liu.sparsearray;
+package com.liu.v_01_sparsearray;
 
 import java.io.*;
-import java.util.Arrays;
 
 /**
  * @Author 刘政
@@ -72,7 +71,7 @@ public class SparseArray {
 
         for (int i = 0; i < sparseArr.length; i++) {
             for (int j = 0; j < sparseArr[0].length; j++) {
-                fileWriter.write(String.valueOf(sparseArr[i][j])+"-");
+                fileWriter.write(String.valueOf(sparseArr[i][j]) + "-");
             }
             fileWriter.newLine();
         }
@@ -83,18 +82,18 @@ public class SparseArray {
         String line;
         StringBuilder stringBuilder = new StringBuilder();
 
-        while ((line =bufferedReader.readLine())!= null){
+        while ((line = bufferedReader.readLine()) != null) {
             stringBuilder.append(line);
         }
         bufferedReader.close();
 
         String[] split = stringBuilder.toString().split("-");
-        int d = Integer.parseInt(split[2])+1;
+        int d = Integer.parseInt(split[2]) + 1;
         int co = 0;
         int[][] ints1 = new int[3][d];
-        for(int i = 0; i < d; i++){
-            for(int j = 0; j < 3; j++){
-                ints1[i][j]= Integer.parseInt(split[co++]);
+        for (int i = 0; i < d; i++) {
+            for (int j = 0; j < 3; j++) {
+                ints1[i][j] = Integer.parseInt(split[co++]);
             }
         }
 
@@ -114,7 +113,6 @@ public class SparseArray {
             }
             System.out.println();
         }
-
 
     }
 }
